@@ -1,0 +1,35 @@
+.register-container {
+  padding: 24px;
+  min-width: 350px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-spinner {
+  margin-right: 8px;
+}

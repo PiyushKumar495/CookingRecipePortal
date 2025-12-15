@@ -1,0 +1,100 @@
+<div class="recipe-detail-container">
+  <button mat-icon-button class="back-button" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <div class="recipe-header">
+    <div class="recipe-image-container">
+      <div *ngIf="recipe?.imageUrl; else placeholder" class="recipe-image">
+        <img [src]="recipe.imageUrl" [alt]="recipe.title">
+      </div>
+      <ng-template #placeholder>
+        <div class="recipe-placeholder">
+          <mat-icon>restaurant</mat-icon>
+        </div>
+      </ng-template>
+    </div>
+    
+    <div class="recipe-info">
+      <h1>{{ recipe.title }}</h1>
+      <p class="recipe-author">by {{ recipe.user?.username || 'Unknown' }}</p>
+      <p class="recipe-description">{{ recipe.description }}</p>
+      
+      <div class="recipe-tags">
+        <mat-chip-set>
+          <mat-chip *ngIf="recipe?.isVegetarian" color="accent">Vegetarian</mat-chip>
+          <mat-chip *ngIf="recipe?.region">{{ recipe.region }}</mat-chip>
+        </mat-chip-set>
+      </div>
+    </div>
+  </div>
+
+  <mat-tab-group class="recipe-tabs">
+    <mat-tab label="Ingredients">
+      <div class="tab-content">
+        <h3>Ingredients</h3>
+        <ul class="ingredients-list">
+          <li *ngFor="let ingredient of getIngredientsList()">{{ ingredient }}</li>
+        </ul>
+      </div>
+    </mat-tab>
+    
+    <mat-tab label="Instructions">
+      <div class="tab-content">
+        <h3>Instructions</h3>
+        <ol class="instructions-list">
+          <li *ngFor="let instruction of getInstructionsList()">{{ instruction }}</li>
+        </ol>
+      </div>
+    </mat-tab>
+    
+    <mat-tab label="Reviews ({{ feedbacks.length }})">
+      <div class="tab-content">
+        <div class="add-review" *ngIf="isLoggedIn">
+          <h3>Add Your Review</h3>
+          <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+            <div class="rating-section">
+              <label>Rating:</label>
+              <div class="star-rating">
+                <mat-icon *ngFor="let star of [1,2,3,4,5]" 
+                         [class.filled]="star <= selectedRating"
+                         (click)="setRating(star)">
+                  star
+                </mat-icon>
+              </div>
+            </div>
+            
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Your Comment</mat-label>
+              <textarea matInput formControlName="comment" rows="3" placeholder="Share your experience..."></textarea>
+            </mat-form-field>
+            
+            <button mat-raised-button color="primary" type="submit" [disabled]="feedbackForm.invalid || selectedRating === 0">
+              Submit Review
+            </button>
+          </form>
+        </div>
+        
+        <div class="login-prompt" *ngIf="!isLoggedIn">
+          <p>Please <button mat-button color="primary" (click)="openLogin()">login</button> to add a review</p>
+        </div>
+        
+        <div class="reviews-list">
+          <div *ngFor="let feedback of feedbacks" class="review-item">
+            <div class="review-header">
+              <strong>{{ feedback.user?.name || 'Anonymous' }}</strong>
+              <div class="review-rating">
+                <mat-icon *ngFor="let star of [1,2,3,4,5]" 
+                         [class.filled]="star <= (feedback.rating || 0)">
+                  star
+                </mat-icon>
+              </div>
+            </div>
+            <p class="review-comment">{{ feedback.comment }}</p>
+            <small class="review-date">{{ feedback.createdAt | date:'short' }}</small>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

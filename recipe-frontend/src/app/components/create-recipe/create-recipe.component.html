@@ -1,0 +1,102 @@
+<div class="create-recipe-container">
+  <div class="hero-header">
+    <div class="hero-content">
+      <div class="hero-icon">
+        <mat-icon>restaurant</mat-icon>
+      </div>
+      <h1>{{isEditMode ? 'Update Your Recipe' : 'Share Your Culinary Creation'}}</h1>
+      <p>{{isEditMode ? 'Refine your culinary masterpiece' : 'Transform your kitchen secrets into treasured community recipes'}}</p>
+    </div>
+  </div>
+
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="recipe-form">
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Recipe Title</mat-label>
+        <input matInput formControlName="title" placeholder="Enter recipe name">
+        <mat-error *ngIf="recipeForm.get('title')?.hasError('required')">
+          Recipe title is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" rows="3" placeholder="Brief description of your recipe"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>Region</mat-label>
+        <mat-select formControlName="region">
+          <mat-option value="North Indian">North Indian</mat-option>
+          <mat-option value="South Indian">South Indian</mat-option>
+          <mat-option value="East Indian">East Indian</mat-option>
+          <mat-option value="West Indian">West Indian</mat-option>
+          <mat-option value="Continental">Continental</mat-option>
+          <mat-option value="Chinese">Chinese</mat-option>
+          <mat-option value="Italian">Italian</mat-option>
+          <mat-option value="Other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="half-width checkbox-container">
+        <mat-checkbox formControlName="isVegetarian">
+          <mat-icon>eco</mat-icon>
+          Vegetarian Recipe
+        </mat-checkbox>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Image URL</mat-label>
+        <input matInput formControlName="imageUrl" placeholder="https://example.com/image.jpg">
+        <mat-hint>Optional: Add a URL to an image of your dish</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Ingredients</mat-label>
+        <textarea matInput formControlName="ingredients" rows="6" 
+                  placeholder="List all ingredients with quantities (one per line)&#10;Example:&#10;2 cups rice&#10;1 tsp salt&#10;3 tbsp oil"></textarea>
+        <mat-error *ngIf="recipeForm.get('ingredients')?.hasError('required')">
+          Ingredients are required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Instructions</mat-label>
+        <textarea matInput formControlName="instructions" rows="8" 
+                  placeholder="Step-by-step cooking instructions&#10;Example:&#10;1. Heat oil in a pan&#10;2. Add rice and stir&#10;3. Cook for 10 minutes"></textarea>
+        <mat-error *ngIf="recipeForm.get('instructions')?.hasError('required')">
+          Instructions are required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form-actions">
+      <button mat-button type="button" routerLink="/home">Cancel</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="recipeForm.invalid || isLoading">
+        <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+        <mat-icon *ngIf="!isLoading">restaurant</mat-icon>
+        <span *ngIf="!isLoading">{{isEditMode ? 'Update Recipe' : 'Create Recipe'}}</span>
+      </button>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      <mat-icon>error</mat-icon>
+      {{errorMessage}}
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      <mat-icon>check_circle</mat-icon>
+      {{successMessage}}
+    </div>
+  </form>
+</div>

@@ -1,0 +1,383 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Ashirvad_New\\CookingRecipePortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\dto\u0027s\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\dto\u0027s\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\dto\u0027s\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\dto\u0027s\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\repository\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\repository\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\dto\u0027s\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\dto\u0027s\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\models\\cookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\models\\cookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\repository\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\repository\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\dto\u0027s\\feedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\dto\u0027s\\feedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipeportal\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C840198-CA13-4553-9BAB-893D0A6706C3}|CookingRecipePortal\\CookingRecipePortal.csproj|solutionrelative:cookingrecipeportal\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipetests\\feedbacktests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|solutionrelative:cookingrecipetests\\feedbacktests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipetests\\profiletests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|solutionrelative:cookingrecipetests\\profiletests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipetests\\recipetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|solutionrelative:cookingrecipetests\\recipetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|c:\\ashirvad_new\\cookingrecipeportal\\cookingrecipetests\\usertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F748F1F-6B7F-407B-B87A-8EACD0CF7A68}|CookingRecipeTests\\CookingRecipeTests.csproj|solutionrelative:cookingrecipetests\\usertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\appsettings.json",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\appsettings.json",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\appsettings.json",
+              "RelativeToolTip": "CookingRecipePortal\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-15T07:14:41.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CookingDbContext.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\CookingDbContext.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Models\\CookingDbContext.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\CookingDbContext.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Models\\CookingDbContext.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA9wCwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:20:06.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T17:57:36.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\User.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Models\\User.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\User.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Models\\User.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T14:33:31.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FeedbackDto.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\FeedbackDto.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\DTO\u0027s\\FeedbackDto.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\FeedbackDto.cs",
+              "RelativeToolTip": "CookingRecipePortal\\DTO\u0027s\\FeedbackDto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwBYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T12:11:20.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\Feedback.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Models\\Feedback.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\Feedback.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Models\\Feedback.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T11:51:38.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Program.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Program.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Program.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T13:20:50.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Models\\Recipe.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Models\\Recipe.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Models\\Recipe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:47:29.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Controllers\\RecipeController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwDQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:02:12.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Controllers\\FeedbackController.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Controllers\\FeedbackController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwGcAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:22:48.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FeedbackTests.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\FeedbackTests.cs",
+              "RelativeDocumentMoniker": "CookingRecipeTests\\FeedbackTests.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\FeedbackTests.cs",
+              "RelativeToolTip": "CookingRecipeTests\\FeedbackTests.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAADwvxYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:20:33.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProfileTests.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\ProfileTests.cs",
+              "RelativeDocumentMoniker": "CookingRecipeTests\\ProfileTests.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\ProfileTests.cs",
+              "RelativeToolTip": "CookingRecipeTests\\ProfileTests.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAiwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:17:50.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:16:21.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfileRepository.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\ProfileRepository.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Repository\\ProfileRepository.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\ProfileRepository.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Repository\\ProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:14:44.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RecipeTests.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\RecipeTests.cs",
+              "RelativeDocumentMoniker": "CookingRecipeTests\\RecipeTests.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\RecipeTests.cs",
+              "RelativeToolTip": "CookingRecipeTests\\RecipeTests.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T11:13:30.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserTests.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\UserTests.cs",
+              "RelativeDocumentMoniker": "CookingRecipeTests\\UserTests.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipeTests\\UserTests.cs",
+              "RelativeToolTip": "CookingRecipeTests\\UserTests.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAtwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T10:30:57.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:07:24.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RecipeDto.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\RecipeDto.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\DTO\u0027s\\RecipeDto.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\RecipeDto.cs",
+              "RelativeToolTip": "CookingRecipePortal\\DTO\u0027s\\RecipeDto.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:07:10.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\DTO\u0027s\\RegisterDto.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\RegisterDto.cs",
+              "RelativeToolTip": "CookingRecipePortal\\DTO\u0027s\\RegisterDto.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:01:04.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\LoginDto.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\DTO\u0027s\\LoginDto.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\DTO\u0027s\\LoginDto.cs",
+              "RelativeToolTip": "CookingRecipePortal\\DTO\u0027s\\LoginDto.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T09:01:02.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Repository\\RecipeRepository.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\RecipeRepository.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Repository\\RecipeRepository.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAmwJoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T05:40:42.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FeedbackRepository.cs",
+              "DocumentMoniker": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\FeedbackRepository.cs",
+              "RelativeDocumentMoniker": "CookingRecipePortal\\Repository\\FeedbackRepository.cs",
+              "ToolTip": "C:\\Ashirvad_New\\CookingRecipePortal\\CookingRecipePortal\\Repository\\FeedbackRepository.cs",
+              "RelativeToolTip": "CookingRecipePortal\\Repository\\FeedbackRepository.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAiwG4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T05:17:03.223Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

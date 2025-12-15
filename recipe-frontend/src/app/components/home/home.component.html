@@ -1,0 +1,81 @@
+<div class="home-container">
+  <div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-icon">
+        <mat-icon>restaurant_menu</mat-icon>
+      </div>
+      <h1>Culinary Adventures Await</h1>
+      <p>Discover, create, and share extraordinary recipes from passionate home chefs worldwide</p>
+      <div class="hero-actions">
+        <button mat-raised-button class="primary-btn" routerLink="/create-recipe" *ngIf="isLoggedIn">
+          <mat-icon>add_circle</mat-icon>
+          Share Your Recipe
+        </button>
+        <button mat-raised-button class="accent-btn" (click)="openLoginDialog()" *ngIf="!isLoggedIn">
+          <mat-icon>group_add</mat-icon>
+          Join Our Kitchen
+        </button>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <mat-icon>local_dining</mat-icon>
+    </div>
+  </div>
+
+  <div class="recipes-section">
+    <div class="section-header">
+      <h2>Featured Recipes</h2>
+      <div class="filter-chips">
+        <mat-chip-set>
+          <mat-chip (click)="filterRecipes('all')" [class.selected]="selectedFilter === 'all'">All</mat-chip>
+          <mat-chip (click)="filterRecipes('vegetarian')" [class.selected]="selectedFilter === 'vegetarian'">Vegetarian</mat-chip>
+          <mat-chip (click)="filterRecipes('north-indian')" [class.selected]="selectedFilter === 'north-indian'">North Indian</mat-chip>
+          <mat-chip (click)="filterRecipes('south-indian')" [class.selected]="selectedFilter === 'south-indian'">South Indian</mat-chip>
+        </mat-chip-set>
+      </div>
+    </div>
+
+    <div class="recipes-grid" *ngIf="filteredRecipes.length > 0">
+      <mat-card class="recipe-card" *ngFor="let recipe of filteredRecipes" (click)="openRecipeDetail(recipe)">
+        <div class="recipe-image">
+          <img [src]="recipe.imageUrl || getDefaultImage(recipe)" [alt]="recipe.title">
+          <div class="recipe-badges">
+            <mat-chip *ngIf="recipe.isVegetarian" class="veg-badge">
+              <mat-icon>eco</mat-icon>
+              Veg
+            </mat-chip>
+            <mat-chip *ngIf="recipe.region" class="region-badge">{{recipe.region}}</mat-chip>
+          </div>
+        </div>
+        
+        <mat-card-content>
+          <h3>{{recipe.title}}</h3>
+          <p class="recipe-description">{{recipe.description}}</p>
+          <div class="recipe-meta">
+            <div class="author">
+              <mat-icon>person</mat-icon>
+              <span>{{recipe.user?.username || 'Unknown'}}</span>
+            </div>
+            <div class="rating" *ngIf="recipe.feedbacks && recipe.feedbacks.length > 0">
+              <mat-icon>star</mat-icon>
+              <span>{{getAverageRating(recipe.feedbacks)}}</span>
+              <span class="review-count">({{recipe.feedbacks.length}})</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="no-recipes" *ngIf="filteredRecipes.length === 0 && !isLoading">
+      <mat-icon>restaurant</mat-icon>
+      <h3>No recipes found</h3>
+      <p>Try adjusting your filters or check back later for new recipes.</p>
+    </div>
+
+    <div class="loading" *ngIf="isLoading">
+      <mat-spinner></mat-spinner>
+      <p>Loading delicious recipes...</p>
+    </div>
+  </div>
+</div>

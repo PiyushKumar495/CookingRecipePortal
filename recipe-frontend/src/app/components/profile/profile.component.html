@@ -1,0 +1,270 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <div class="profile-info">
+      <div class="avatar">
+        <mat-icon>account_circle</mat-icon>
+      </div>
+      <div class="user-details">
+        <h1>{{userProfile?.name || currentUser?.name}}</h1>
+        <p class="email">{{userProfile?.email}}</p>
+        <p class="bio" *ngIf="userProfile?.bio">{{userProfile?.bio}}</p>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <button mat-raised-button color="primary" (click)="editProfile()">
+        <mat-icon>edit</mat-icon>
+        Edit Profile
+      </button>
+    </div>
+  </div>
+
+  <div class="profile-stats" *ngIf="!isAdmin">
+    <div class="stat-card">
+      <mat-icon>restaurant</mat-icon>
+      <div class="stat-info">
+        <h3>{{userRecipes.length}}</h3>
+        <p>Recipes Created</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <mat-icon>star</mat-icon>
+      <div class="stat-info">
+        <h3>{{totalRatings}}</h3>
+        <p>Total Reviews</p>
+      </div>
+    </div>
+    <div class="stat-card">
+      <mat-icon>thumb_up</mat-icon>
+      <div class="stat-info">
+        <h3>{{averageRating || 0}}</h3>
+        <p>Average Rating</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-info" *ngIf="isAdmin">
+    <mat-card class="admin-card">
+      <mat-icon>admin_panel_settings</mat-icon>
+      <div class="admin-details">
+        <h3>Administrator Account</h3>
+        <p>You have full access to manage recipes, feedbacks, and users across the platform.</p>
+        <button mat-raised-button color="primary" routerLink="/admin">
+          <mat-icon>dashboard</mat-icon>
+          Go to Admin Panel
+        </button>
+      </div>
+    </mat-card>
+  </div>
+
+  <div class="profile-content">
+    <mat-tab-group>
+      <mat-tab label="My Recipes" *ngIf="!isAdmin">
+        <div class="tab-content">
+          <div class="recipes-grid" *ngIf="userRecipes.length > 0">
+            <mat-card class="recipe-card" *ngFor="let recipe of userRecipes" (click)="openRecipeDetail(recipe)">
+              <div class="recipe-image">
+                <img [src]="recipe.imageUrl || getDefaultImage(recipe)" [alt]="recipe.title">
+                <div class="recipe-badges">
+                  <mat-chip *ngIf="recipe.isVegetarian" class="veg-badge">
+                    <mat-icon>eco</mat-icon>
+                    Veg
+                  </mat-chip>
+                  <mat-chip *ngIf="recipe.region" class="region-badge">{{recipe.region}}</mat-chip>
+                </div>
+              </div>
+              
+              <mat-card-content>
+                <h3>{{recipe.title}}</h3>
+                <p class="recipe-description">{{recipe.description}}</p>
+                <div class="recipe-meta">
+                  <div class="date">
+                    <mat-icon>schedule</mat-icon>
+                    <span>{{recipe.createdAt | date:'mediumDate'}}</span>
+                  </div>
+                  <div class="rating" *ngIf="recipe.feedbacks && recipe.feedbacks.length > 0">
+                    <mat-icon>star</mat-icon>
+                    <span>{{getAverageRating(recipe.feedbacks)}}</span>
+                    <span class="review-count">({{recipe.feedbacks.length}})</span>
+                  </div>
+                </div>
+                <div class="recipe-actions">
+                  <button mat-icon-button color="primary" (click)="editRecipe(recipe); $event.stopPropagation()" matTooltip="Edit Recipe">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn" (click)="deleteRecipe(recipe); $event.stopPropagation()" matTooltip="Delete Recipe">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="no-recipes" *ngIf="userRecipes.length === 0 && !isLoading">
+            <mat-icon>restaurant</mat-icon>
+            <h3>No recipes yet</h3>
+            <p>Start sharing your delicious recipes with the community!</p>
+            <button mat-raised-button color="primary" routerLink="/create-recipe">
+              <mat-icon>add</mat-icon>
+              Create Your First Recipe
+            </button>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="My Reviews" *ngIf="!isAdmin">
+        <div class="tab-content">
+          <div class="reviews-section" *ngIf="userFeedbacks.length > 0">
+            <div class="review-card" *ngFor="let feedback of userFeedbacks">
+              <div class="review-header">
+                <h4>{{feedback.recipeTitle}}</h4>
+                <div class="review-rating">
+                  <mat-icon>star</mat-icon>
+                  <span>{{feedback.rating}}/5</span>
+                </div>
+              </div>
+              
+              <div class="review-content" *ngIf="editingFeedback?.feedbackId !== feedback.feedbackId">
+                <p>{{feedback.comment}}</p>
+                <div class="review-date">
+                  <mat-icon>schedule</mat-icon>
+                  <span>{{feedback.createdAt | date:'mediumDate'}}</span>
+                </div>
+                <div class="review-actions">
+                  <button mat-icon-button color="primary" (click)="editFeedback(feedback)" matTooltip="Edit Review">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn" (click)="deleteFeedback(feedback)" matTooltip="Delete Review">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="review-edit" *ngIf="editingFeedback?.feedbackId === feedback.feedbackId">
+                <div class="edit-header">
+                  <h5>Edit your review for "{{feedback.recipeTitle}}"</h5>
+                </div>
+                
+                <mat-form-field appearance="outline">
+                  <mat-label>Rating</mat-label>
+                  <mat-select [(ngModel)]="editingFeedback.rating" required>
+                    <mat-option value="1">
+                      <span class="rating-option">
+                        <mat-icon>star</mat-icon> 1 - Poor
+                      </span>
+                    </mat-option>
+                    <mat-option value="2">
+                      <span class="rating-option">
+                        <mat-icon>star</mat-icon><mat-icon>star</mat-icon> 2 - Fair
+                      </span>
+                    </mat-option>
+                    <mat-option value="3">
+                      <span class="rating-option">
+                        <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon> 3 - Good
+                      </span>
+                    </mat-option>
+                    <mat-option value="4">
+                      <span class="rating-option">
+                        <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon> 4 - Very Good
+                      </span>
+                    </mat-option>
+                    <mat-option value="5">
+                      <span class="rating-option">
+                        <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon> 5 - Excellent
+                      </span>
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                
+                <mat-form-field appearance="outline">
+                  <mat-label>Your Review</mat-label>
+                  <textarea matInput [(ngModel)]="editingFeedback.comment" rows="4" 
+                           placeholder="Share your thoughts about this recipe..." 
+                           maxlength="500" required></textarea>
+                  <mat-hint>{{editingFeedback.comment?.length || 0}}/500 characters</mat-hint>
+                </mat-form-field>
+                
+                <div class="edit-actions">
+                  <button mat-button (click)="cancelEdit()" type="button">
+                    <mat-icon>close</mat-icon>
+                    Cancel
+                  </button>
+                  <button mat-raised-button color="primary" (click)="updateFeedback()" 
+                          [disabled]="!editingFeedback.rating || !editingFeedback.comment?.trim()">
+                    <mat-icon>save</mat-icon>
+                    Update Review
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="no-reviews" *ngIf="userFeedbacks.length === 0">
+            <mat-icon>rate_review</mat-icon>
+            <h3>No reviews yet</h3>
+            <p>You haven't reviewed any recipes yet. Start exploring and share your thoughts!</p>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Admin Dashboard" *ngIf="isAdmin">
+        <div class="tab-content">
+          <div class="admin-dashboard">
+            <h3>Quick Actions</h3>
+            <div class="admin-actions">
+              <button mat-raised-button color="primary" routerLink="/admin">
+                <mat-icon>dashboard</mat-icon>
+                Admin Panel
+              </button>
+              <button mat-raised-button color="accent" routerLink="/home">
+                <mat-icon>home</mat-icon>
+                View Platform
+              </button>
+            </div>
+            <div class="admin-note">
+              <mat-icon>info</mat-icon>
+              <p>As an administrator, you can manage all recipes and feedbacks from the Admin Panel.</p>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Settings">
+        <div class="tab-content">
+          <form [formGroup]="profileForm" (ngSubmit)="updateProfile()" class="profile-form">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" formControlName="email" readonly>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Bio</mat-label>
+              <textarea matInput formControlName="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+            </mat-form-field>
+
+            <div class="form-actions">
+              <button mat-raised-button color="primary" type="submit" [disabled]="profileForm.invalid || isUpdating">
+                <mat-spinner *ngIf="isUpdating" diameter="20"></mat-spinner>
+                <span *ngIf="!isUpdating">Update Profile</span>
+              </button>
+            </div>
+
+            <div *ngIf="updateMessage" class="update-message" [class.success]="updateSuccess" [class.error]="!updateSuccess">
+              <mat-icon>{{updateSuccess ? 'check_circle' : 'error'}}</mat-icon>
+              {{updateMessage}}
+            </div>
+          </form>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div class="loading" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+    <p>Loading profile...</p>
+  </div>
+</div>

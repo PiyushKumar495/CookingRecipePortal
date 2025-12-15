@@ -1,0 +1,47 @@
+<div class="login-container">
+  <h2 mat-dialog-title>Welcome Back</h2>
+  
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required>
+      <mat-icon matSuffix>email</mat-icon>
+      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+        Please enter a valid email
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" required>
+      <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" type="button">
+        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-button type="button" mat-dialog-close>Cancel</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid || isLoading">
+        <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+        <span *ngIf="!isLoading">Login</span>
+      </button>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      <mat-icon>error</mat-icon>
+      {{errorMessage}}
+    </div>
+  </form>
+
+  <div class="demo-credentials">
+    <p><strong>Demo Credentials:</strong></p>
+    <p>Email: rajesh&#64;example.com</p>
+    <p>Password: User123!</p>
+  </div>
+</div>

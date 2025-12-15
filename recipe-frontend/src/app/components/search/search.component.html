@@ -1,0 +1,85 @@
+<div class="search-container">
+  <div class="search-header">
+    <h1>Search Recipes</h1>
+    <p>Find your favorite recipes by name, ingredient, or cuisine</p>
+  </div>
+
+  <div class="search-bar">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search recipes...</mat-label>
+      <input matInput [(ngModel)]="searchQuery" (keyup.enter)="searchRecipes()" placeholder="Try 'biryani', 'chicken', or 'vegetarian'">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="searchRecipes()" [disabled]="!searchQuery.trim()">
+      <mat-icon>search</mat-icon>
+      Search
+    </button>
+  </div>
+
+  <div class="search-results" *ngIf="hasSearched">
+    <div class="results-header">
+      <h2 *ngIf="searchResults.length > 0">Found {{searchResults.length}} recipe(s)</h2>
+      <h2 *ngIf="searchResults.length === 0 && !isLoading">No recipes found</h2>
+    </div>
+
+    <div class="recipes-grid" *ngIf="searchResults.length > 0">
+      <mat-card class="recipe-card" *ngFor="let recipe of searchResults" (click)="openRecipeDetail(recipe)">
+        <div class="recipe-image">
+          <img [src]="recipe.imageUrl || getDefaultImage(recipe)" [alt]="recipe.title">
+          <div class="recipe-badges">
+            <mat-chip *ngIf="recipe.isVegetarian" class="veg-badge">
+              <mat-icon>eco</mat-icon>
+              Veg
+            </mat-chip>
+            <mat-chip *ngIf="recipe.region" class="region-badge">{{recipe.region}}</mat-chip>
+          </div>
+        </div>
+        
+        <mat-card-content>
+          <h3>{{recipe.title}}</h3>
+          <p class="recipe-description">{{recipe.description}}</p>
+          <div class="recipe-meta">
+            <div class="author">
+              <mat-icon>person</mat-icon>
+              <span>{{recipe.user?.username || 'Unknown'}}</span>
+            </div>
+            <div class="rating" *ngIf="recipe.feedbacks && recipe.feedbacks.length > 0">
+              <mat-icon>star</mat-icon>
+              <span>{{getAverageRating(recipe.feedbacks)}}</span>
+              <span class="review-count">({{recipe.feedbacks.length}})</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="no-results" *ngIf="searchResults.length === 0 && !isLoading">
+      <mat-icon>search_off</mat-icon>
+      <h3>No recipes found</h3>
+      <p>Try searching with different keywords or browse all recipes on the home page.</p>
+      <button mat-raised-button color="primary" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        Browse All Recipes
+      </button>
+    </div>
+
+    <div class="loading" *ngIf="isLoading">
+      <mat-spinner></mat-spinner>
+      <p>Searching for delicious recipes...</p>
+    </div>
+  </div>
+
+  <div class="search-suggestions" *ngIf="!hasSearched">
+    <h3>Popular Searches</h3>
+    <div class="suggestion-chips">
+      <mat-chip-set>
+        <mat-chip (click)="searchWithQuery('biryani')">Biryani</mat-chip>
+        <mat-chip (click)="searchWithQuery('curry')">Curry</mat-chip>
+        <mat-chip (click)="searchWithQuery('dal')">Dal</mat-chip>
+        <mat-chip (click)="searchWithQuery('chicken')">Chicken</mat-chip>
+        <mat-chip (click)="searchWithQuery('vegetarian')">Vegetarian</mat-chip>
+        <mat-chip (click)="searchWithQuery('dessert')">Dessert</mat-chip>
+      </mat-chip-set>
+    </div>
+  </div>
+</div>
