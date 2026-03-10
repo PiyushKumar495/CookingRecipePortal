@@ -9,7 +9,7 @@
 
 **A delicious full-stack web application for sharing and discovering amazing recipes! 🌟**
 
-[🚀 Live Demo](#) • [📖 Documentation](#-installation--setup) • [🐛 Report Bug](#-troubleshooting) • [✨ Request Feature](#-future-enhancements)
+• [📖 Documentation](#-installation--setup) • [🐛 Report Bug](#-troubleshooting) • [✨ Request Feature](#-future-enhancements)
 
 </div>
 
