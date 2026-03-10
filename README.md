@@ -287,8 +287,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- 🐙 GitHub: [@yourusername](https://github.com/piyushkumar495)
-- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/piyushkumar123)
+- 🐙 GitHub: [@piyushkumar495](https://github.com/piyushkumar495)
+- 💼 LinkedIn: [@piyushkumar123](https://linkedin.com/in/piyushkumar123)
 - 📧 Email: piyushkumarbarnwal@gmail.com
 
 ---
